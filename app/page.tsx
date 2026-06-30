@@ -15,7 +15,7 @@ const content: Record<string, any> = {
       "มีประสบการณ์ด้าน Frontend Development และ UX/UI Design ทั้งการออกแบบเว็บไซต์ ระบบ Dashboard และ Web Application พร้อมเข้าใจการทำ Responsive Design และ Modern UI",
     contactLabel: "ติดต่อ",
     locationLabel: "ที่อยู่",
-    locationValue: "374/7 หอพักรอนงค์การ์เดนท์ ซอยวงศ์สว่าง 11 ถนนวงศ์สว่าง แขวงวงศ์สว่าง เขตบางซื่อ กทม. 10800",
+    locationValue: "374/7 หอพักอรอนงค์การ์เดนท์ ซอยวงศ์สว่าง 11 ถนนวงศ์สว่าง แขวงวงศ์สว่าง เขตบางซื่อ กทม. 10800",
     eduLabel: "การศึกษา",
     eduTitle: "ประวัติการศึกษา",
     skillsLabel: "ทักษะ",
@@ -26,9 +26,17 @@ const content: Record<string, any> = {
     expTitle: "ประสบการณ์การทำงาน",
     viewProject: "ดูผลงาน",
     whatIDid: "งานที่ทำ",
+    challengeLabel: "ปัญหาที่พบ",
+    solutionLabel: "วิธีแก้ปัญหา",
+    resultLabel: "ผลลัพธ์",
     moreImages: "ภาพเพิ่มเติม",
     thankYou: "ขอบคุณ",
     footerSub: "นักพัฒนา Frontend & นักออกแบบ UI",
+    skillCategories: [
+      { label: "Frontend", items: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React.js", "Next.js"] },
+      { label: "Design", items: ["Figma", "Canva", "Affinity Designer"] },
+      { label: "อื่น ๆ", items: ["WordPress", "Supabase", "Git", "VS Code", "Microsoft Office", "AI Tools"] },
+    ],
     educations: [
       {
         period: "2564 – 2568",
@@ -48,10 +56,10 @@ const content: Record<string, any> = {
     experiences: [
       {
         period: "มกราคม 2569 – ปัจจุบัน",
-        role: "ตำแหน่ง Frontend Developer",
+        role: "ตำแหน่ง Frontend Developer/UXUI Designer",
         company: "บริษัท วิสดอม เซ็นทริค จำกัด",
         items: [
-          "พัฒนาระบบภายในบริษัท",
+          "พัฒนาระบบภายในบริษัท ทำงานร่วมกับทีม IT และฝ่ายที่เกี่ยวข้อง",
           "ออกแบบ UX/UI, Infographic และไอคอนสำหรับใช้ภายในระบบและเว็บไซต์ และทำเทมเพลตสไลด์ใน PPT",
           "โพสต์ข่าวสำคัญเรื่อง IT และรูปวันสำคัญ",
         ],
@@ -62,19 +70,8 @@ const content: Record<string, any> = {
         company: "บริษัท มอสกี้ คอร์ปอเรชั่น จำกัด",
         items: [
           "ออกแบบและพัฒนาเว็บไซต์ภายในองค์กร",
-          "พัฒนา Dashboard ของ SmartFarm",
+          "พัฒนา Dashboard ของ SmartFarm ร่วมกับทีมพัฒนา",
           "ปรับปรุง UI หน้าโปรแกรม Remote Control Desktop",
-        ],
-      },
-      {
-        period: "ตุลาคม 2562 – กุมภาพันธ์ 2563",
-        role: "นักศึกษาฝึกงาน",
-        company: "บริษัท ไทยอี เมทัล เวิร์คส จำกัด",
-        items: [
-          "การจัดการเอกสาร",
-          "วัดคุณภาพเหล็ก",
-          "บันทึกข้อมูลคุณภาพเหล็กรายวันลงใน Excel",
-          "เจ้าหน้าที่ห้องพัสดุ",
         ],
       },
     ],
@@ -82,13 +79,18 @@ const content: Record<string, any> = {
       {
         title: "SmartFarm Dashboard",
         description:
-          "ออกแบบและพัฒนา Dashboard สำหรับระบบ SmartFarm พร้อมแสดงข้อมูล IoT แบบ Real-time และ UX/UI ที่ใช้งานง่าย รองรับ Responsive ทั้ง Desktop และ Mobile",
+          "ออกแบบและพัฒนา Dashboard สำหรับระบบ SmartFarm พร้อมแสดงข้อมูล IoT แบบ Real-time และ UX/UI ที่ใช้งานง่าย รองรับ Responsive ทั้ง Desktop และ Mobile ช่วยให้ผู้ดูแลตรวจสอบสถานะ Greenhouse ได้รวดเร็วขึ้นโดยไม่ต้องเดินตรวจด้วยตนเอง",
         details: [
           "ออกแบบ UI Dashboard แสดงข้อมูลเซ็นเซอร์ IoT แบบ Real-time",
           "พัฒนาหน้าแสดงสถานะ Greenhouse แต่ละหลัง",
           "เชื่อมต่อข้อมูลผ่าน ThingsBoard.io",
           "ออกแบบไอคอนสำหรับใช้ภายใน Dashboard",
         ],
+        challenge:
+          "ข้อมูลเซ็นเซอร์ IoT จากหลาย Greenhouse ส่งค่าเข้ามาพร้อมกันแบบ Real-time ทำให้หน้า Dashboard เดิมโหลดช้าและข้อมูลแสดงผลไม่ตรงกันระหว่างอุปกรณ์",
+        solution:
+          "ออกแบบโครงสร้างหน้าใหม่ให้ดึงข้อมูลเฉพาะ Greenhouse ที่กำลังแสดงผล และจัดกลุ่มการอัปเดตค่าจาก ThingsBoard.io ให้เป็นรอบเดียวกัน ลดการเรียกข้อมูลซ้ำซ้อน",
+        result: "หน้า Dashboard โหลดเร็วขึ้นและผู้ดูแลตรวจสอบสถานะ Greenhouse ได้แม่นยำแบบ Real-time",
         tech: ["HTML", "JavaScript", "CSS", "ThingsBoard.io", "Dashboard", "IoT"],
         image: "/image/dashboard.jpg",
         images: ["/image/dashboard.jpg", "/image/fan.jpg"],
@@ -96,7 +98,7 @@ const content: Record<string, any> = {
       {
         title: "Employee Check-in System",
         description:
-          "พัฒนาระบบเช็คอินพนักงานภายในองค์กร พร้อมระบบบันทึกเวลา ตรวจสอบสถานะ และออกแบบ UX/UI สำหรับการใช้งานจริง",
+          "พัฒนาระบบเช็คอินพนักงานภายในองค์กร พร้อมระบบบันทึกเวลา ตรวจสอบสถานะ และออกแบบ UX/UI สำหรับการใช้งานจริง ช่วยลดงานเอกสารและความผิดพลาดจากการกรอกเวลาด้วยมือ",
         details: [
           "พัฒนาระบบบันทึกเวลาเข้า-ออกงานของพนักงาน",
           "ออกแบบหน้า Dashboard แสดงสถานะพนักงานแบบ Real-time",
@@ -104,6 +106,11 @@ const content: Record<string, any> = {
           "ออกแบบ UX/UI ให้ใช้งานง่าย รองรับ Responsive",
           "พัฒนาระบบจัดการข้อมูลภายในองค์กรด้วย Next.js",
         ],
+        challenge:
+          "ระบบเดิมใช้การกรอกเวลาด้วยมือลงเอกสาร ทำให้เกิดความผิดพลาดบ่อย และฝ่ายบุคคลต้องรวบรวมข้อมูลเองทุกสิ้นเดือน",
+        solution:
+          "ออกแบบระบบเช็คอินแบบ Real-time เชื่อมต่อฐานข้อมูลด้วย Supabase พร้อมหน้า Dashboard สรุปสถานะพนักงานให้ฝ่ายบุคคลดูได้ทันที ไม่ต้องรวบรวมเอกสารเอง",
+        result: "ลดเวลาทำงานเอกสารของฝ่ายบุคคลและลดความผิดพลาดจากการกรอกเวลาด้วยมือได้อย่างชัดเจน",
         tech: ["Next.js", "JavaScript", "Tailwind CSS", "Supabase", "UX/UI", "Responsive Design"],
         image: "/image/system.jpg",
         images: ["/image/system.jpg", "/image/LOGINDT.jpg", "/image/MB.jpg", "/image/AT.jpg", "/image/MBAT.jpg", "/image/DB.jpg"],
@@ -118,6 +125,11 @@ const content: Record<string, any> = {
           "สร้าง Interactive Prototype ใน Figma",
           "จัดทำ Design System สำหรับใช้งานในทีม",
         ],
+        challenge:
+          "หน้าจอ Mobile และ Desktop ต้องใช้งานร่วมกันแต่มีขนาดและรูปแบบการใช้งานต่างกันมาก ทำให้ทีมพัฒนาตีความดีไซน์ไม่ตรงกัน",
+        solution:
+          "จัดทำ Design System และ Wireframe ที่ชัดเจนสำหรับทั้งสองแพลตฟอร์ม พร้อมสร้าง Interactive Prototype ใน Figma ให้ทีมพัฒนาดู User Flow จริงก่อนลงมือเขียนโค้ด",
+        result: "ทีมพัฒนาทำงานตรงตามดีไซน์มากขึ้น และลดรอบการแก้ไขงานหลังพัฒนาเสร็จ",
         tech: ["Figma", "Prototype", "UX/UI", "Wireframe", "Design System"],
         image: "/image/uxui.jpg",
         links: [
@@ -140,6 +152,11 @@ const content: Record<string, any> = {
           "ออกแบบ UI/UX และ Responsive Design",
           "สร้าง Dashboard สำหรับจัดการข้อมูล",
         ],
+        challenge:
+          "เว็บไซต์เดิมไม่รองรับการแสดงผลบนมือถือ และทีมงานไม่มีเครื่องมือกลางสำหรับจัดการข้อมูลสินค้า/ลูกค้า ต้องทำงานแยกกันในหลายไฟล์",
+        solution:
+          "ปรับโครงสร้างเว็บไซต์ใหม่ด้วย WordPress และ Elementor พร้อม Responsive Design และพัฒนา Dashboard กลางด้วย Next.js ให้ทีมจัดการข้อมูลได้จากที่เดียว",
+        result: "เว็บไซต์ใช้งานได้ดีทุกขนาดหน้าจอ และทีมงานจัดการข้อมูลได้สะดวกรวดเร็วขึ้น",
         tech: ["WordPress", "Elementor", "CSS", "Next.js", "Dashboard", "Responsive"],
         image: "/image/web.png",
         images: ["/image/web.png", "/image/codesuite.png", "/image/inven.png", "/image/kp.png"],
@@ -154,6 +171,11 @@ const content: Record<string, any> = {
           "ออกแบบสื่อประชาสัมพันธ์และ Content วันสำคัญ",
           "จัดทำเทมเพลต PPT สำหรับการนำเสนองาน",
         ],
+        challenge:
+          "แต่ละแผนกผลิตสื่อประชาสัมพันธ์เองในสไตล์ที่ไม่เป็นไปในทิศทางเดียวกัน ทำให้ภาพลักษณ์องค์กรดูไม่เป็นมาตรฐาน",
+        solution:
+          "วาง Brand Guideline และจัดทำเทมเพลต Infographic, ไอคอน และ PPT กลางให้ทุกแผนกใช้ร่วมกัน เพื่อให้สื่อทุกชิ้นมีโทนสีและสไตล์เดียวกัน",
+        result: "สื่อประชาสัมพันธ์ขององค์กรมีความเป็นมาตรฐานเดียวกัน และผลิตเนื้อหาได้รวดเร็วขึ้น",
         tech: ["Canva", "Figma", "Graphic Design", "Social Media", "Branding"],
         image: "/image/graphic.jpg",
         images: ["/image/graphic.jpg", "/image/1.jpg", "/image/2.jpg", "/image/3.jpg", "/image/4.jpg", "/image/5.jpg", "/image/6.jpg"],
@@ -161,9 +183,9 @@ const content: Record<string, any> = {
     ],
   },
   en: {
-    role: "Frontend Developer",
+    role: "Frontend Developer/UXUI Designer",
     heroDesc:
-      "I am an active person who always tries new things and challenges myself with different communities and environments. Easy-going, Enthusiastic, and energetic — passionate about building great web experiences.",
+      "I'm an active learner who enjoys challenging myself with diverse communities and environments. I'm dedicated and committed to my work, with a strong drive to keep learning and improving my skills in frontend development.",
     viewProjects: "View Projects",
     downloadResume: "Download Resume",
     aboutLabel: "ABOUT ME",
@@ -183,15 +205,23 @@ const content: Record<string, any> = {
     expTitle: "Work Experience",
     viewProject: "View Project",
     whatIDid: "What I did",
+    challengeLabel: "Challenge",
+    solutionLabel: "Solution",
+    resultLabel: "Result",
     moreImages: "More Images",
     thankYou: "THANK YOU",
     footerSub: "Frontend Developer & UI Designer",
+    skillCategories: [
+      { label: "Frontend", items: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React.js", "Next.js"] },
+      { label: "Design", items: ["Figma", "Canva", "Affinity Designer"] },
+      { label: "Other", items: ["WordPress", "Supabase", "Git", "VS Code", "Microsoft Office", "AI Tools"] },
+    ],
     educations: [
       {
         period: "2021 – 2025",
         level: "University",
         school: "King Mongkut's University of Technology North Bangkok",
-        detail: "Industrial Technology College · Department of Information and Production Management",
+        detail: "College of Industrial Technology · Department of Production Technology and Information Management",
         gpax: "2.71",
       },
       {
@@ -205,10 +235,10 @@ const content: Record<string, any> = {
     experiences: [
       {
         period: "January 2026 – Present",
-        role: "Frontend Developer",
+        role: "Frontend Developer/UXUI Designer",
         company: "Wisdom Centric Co., Ltd.",
         items: [
-          "Develop and maintain internal company systems.",
+          "Develop internal company systems, collaborating with the IT team and other departments.",
           "Design UX/UI, infographics, icons for internal systems and websites, and PowerPoint presentation templates.",
           "Create and publish IT-related news content and important occasion graphics.",
         ],
@@ -219,19 +249,8 @@ const content: Record<string, any> = {
         company: "Moscii Corporation Co., Ltd.",
         items: [
           "Designed and developed internal websites for the organization",
-          "Developed a SmartFarm Dashboard system",
+          "Developed a SmartFarm Dashboard system as part of the development team",
           "Improved the UI of the Remote Control Desktop application",
-        ],
-      },
-      {
-        period: "Oct 2019 – Feb 2020",
-        role: "Intern",
-        company: "Thai Vir Metal Works Company Limited",
-        items: [
-          "Document Management",
-          "Measure steel quality",
-          "Enter daily steel quality data into Excel",
-          "Parcel room officer",
         ],
       },
     ],
@@ -239,7 +258,7 @@ const content: Record<string, any> = {
       {
         title: "SmartFarm Dashboard",
         description:
-          "Designed and developed a SmartFarm Dashboard with real-time IoT data visualization and an intuitive UX/UI, fully responsive for both Desktop and Mobile.",
+          "Designed and developed a SmartFarm Dashboard with real-time IoT data visualization and an intuitive UX/UI, fully responsive for both Desktop and Mobile — enabling staff to monitor Greenhouse status quickly without manual on-site checks.",
         details: [
           "Designed a real-time IoT sensor data visualization UI",
           "Developed individual Greenhouse status monitoring pages",
@@ -247,6 +266,11 @@ const content: Record<string, any> = {
           "Integrated data via ThingsBoard.io",
           "Designed custom icons for use within the Dashboard",
         ],
+        challenge:
+          "Sensor data from multiple Greenhouses streamed in simultaneously, causing the original dashboard to load slowly and show inconsistent values across devices.",
+        solution:
+          "Restructured the page to fetch data only for the currently viewed Greenhouse and batched ThingsBoard.io update cycles to cut redundant requests.",
+        result: "The dashboard loads faster and staff can monitor Greenhouse status accurately in real time.",
         tech: ["HTML", "JavaScript", "CSS", "ThingsBoard.io", "Dashboard", "IoT"],
         image: "/image/dashboard.jpg",
         images: ["/image/dashboard.jpg", "/image/fan.jpg"],
@@ -254,13 +278,19 @@ const content: Record<string, any> = {
       {
         title: "Employee Check-in System",
         description:
-          "Developed an in-house employee check-in system with time tracking, status monitoring, and a practical UX/UI designed for real-world organizational use.",
+          "Developed an in-house employee check-in system with time tracking, status monitoring, and a practical UX/UI designed for real-world organizational use — reducing manual paperwork and data-entry errors.",
         details: [
           "Built a time-in/time-out recording system for employees",
           "Designed a real-time employee status Dashboard",
           "Integrated database with Supabase",
           "Designed intuitive UX/UI with responsive layout",
+          "Built the internal data management system using Next.js",
         ],
+        challenge:
+          "The previous process relied on manual paper logs, leading to frequent errors and forcing HR to compile records by hand every month.",
+        solution:
+          "Built a real-time check-in system backed by Supabase, with a status Dashboard HR could view instantly instead of compiling reports manually.",
+        result: "Significantly reduced HR's manual paperwork and eliminated common time-entry errors.",
         tech: ["Next.js", "JavaScript", "Tailwind CSS", "Supabase", "UX/UI", "Responsive Design"],
         image: "/image/system.jpg",
         images: ["/image/system.jpg", "/image/LOGINDT.jpg", "/image/MB.jpg", "/image/AT.jpg", "/image/MBAT.jpg", "/image/DB.jpg"],
@@ -275,6 +305,11 @@ const content: Record<string, any> = {
           "Built interactive Prototypes in Figma",
           "Created a Design System for team-wide use",
         ],
+        challenge:
+          "Mobile and Desktop screens needed to work together but differed greatly in size and interaction patterns, causing the dev team to misread the intended design.",
+        solution:
+          "Built a clear Design System and Wireframes for both platforms, plus interactive Figma prototypes so the dev team could walk through the real User Flow before coding.",
+        result: "Development matched the design much more closely, cutting down post-build revision cycles.",
         tech: ["Figma", "Prototype", "UX/UI", "Wireframe", "Design System"],
         image: "/image/uxui.jpg",
         links: [
@@ -297,6 +332,11 @@ const content: Record<string, any> = {
           "Designed UI/UX and Responsive layout",
           "Created a Dashboard for data management",
         ],
+        challenge:
+          "The old site wasn't mobile-friendly, and the team lacked a shared tool for managing product/customer data, working across scattered files instead.",
+        solution:
+          "Rebuilt the site on WordPress and Elementor with full Responsive Design, and built a central Dashboard in Next.js so the team could manage data in one place.",
+        result: "The site now works well on every screen size, and the team manages data faster and more reliably.",
         tech: ["WordPress", "Elementor", "CSS", "Next.js", "Dashboard", "Responsive"],
         image: "/image/web.png",
         images: ["/image/web.png", "/image/codesuite.png", "/image/inven.png", "/image/kp.png"],
@@ -311,6 +351,11 @@ const content: Record<string, any> = {
           "Produced PR materials and special occasion content",
           "Designed PowerPoint templates for presentations",
         ],
+        challenge:
+          "Each department produced its own PR materials in inconsistent styles, making the company's overall brand image look fragmented.",
+        solution:
+          "Established a brand guideline and shared templates for infographics, icons, and PPT decks so every department used the same tone and style.",
+        result: "Company-wide communications now look consistent, and content production is noticeably faster.",
         tech: ["Canva", "Figma", "Graphic Design", "Social Media", "Branding"],
         image: "/image/graphic.jpg",
         images: ["/image/graphic.jpg", "/image/1.jpg", "/image/2.jpg", "/image/3.jpg", "/image/4.jpg", "/image/5.jpg", "/image/6.jpg"],
@@ -318,12 +363,6 @@ const content: Record<string, any> = {
     ],
   },
 };
-
-const skills = [
-  "HTML", "CSS", "Tailwind CSS", "JavaScript", "React.js",
-  "Next.js", "WordPress", "Figma", "Canva", "Supabase",
-  "Git", "VS Code", "Affinity Designer", "Microsoft Office", "AI Tools",
-];
 
 export default function PortfolioPage() {
   const [lang, setLang] = useState("th");
@@ -341,6 +380,7 @@ export default function PortfolioPage() {
         <div className="flex items-center bg-slate-100 border border-slate-200 rounded-2xl p-1 gap-1">
           <button
             onClick={() => setLang("th")}
+            aria-label="เปลี่ยนเป็นภาษาไทย"
             className={`px-5 py-2 rounded-xl font-semibold text-sm transition ${
               lang === "th" ? "bg-blue-500 text-white shadow" : "text-slate-500 hover:text-blue-500"
             }`}
@@ -349,6 +389,7 @@ export default function PortfolioPage() {
           </button>
           <button
             onClick={() => setLang("en")}
+            aria-label="Switch to English"
             className={`px-5 py-2 rounded-xl font-semibold text-sm transition ${
               lang === "en" ? "bg-blue-500 text-white shadow" : "text-slate-500 hover:text-blue-500"
             }`}
@@ -376,8 +417,8 @@ export default function PortfolioPage() {
                 {t.viewProjects}
               </a>
               <a
-                href="/Resume en.pdf"
-                download="Jirawran_Resume.pdf"
+                href="/Resume-Jirawran.pdf"
+                download="Resume-Jirawran.pdf"
                 className="px-7 py-4 border border-slate-300 hover:border-blue-400 hover:text-blue-500 transition rounded-2xl font-semibold text-slate-700"
               >
                 {t.downloadResume}
@@ -459,13 +500,20 @@ export default function PortfolioPage() {
           <p className="text-blue-500 font-semibold mb-3">{t.skillsLabel}</p>
           <h2 className="text-4xl font-bold text-slate-900">{t.skillsTitle}</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-400 transition duration-300 hover:-translate-y-1 shadow-sm"
-            >
-              <p className="font-semibold text-lg text-slate-800">{skill}</p>
+        <div className="flex flex-col gap-8">
+          {t.skillCategories.map((cat: any) => (
+            <div key={cat.label}>
+              <p className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">{cat.label}</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+                {cat.items.map((skill: string) => (
+                  <div
+                    key={skill}
+                    className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-400 transition duration-300 hover:-translate-y-1 shadow-sm"
+                  >
+                    <p className="font-semibold text-lg text-slate-800">{skill}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -589,6 +637,7 @@ export default function PortfolioPage() {
                   />
                   <button
                     onClick={() => setSelectedProject(null)}
+                    aria-label="ปิดรายละเอียดผลงาน"
                     className="absolute top-4 right-4 bg-white/80 hover:bg-white text-slate-700 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg shadow transition"
                   >
                     ✕
@@ -598,6 +647,7 @@ export default function PortfolioPage() {
                 <div className="relative bg-slate-50 border-b border-slate-200 px-8 pt-8 pb-6 flex flex-col gap-3">
                   <button
                     onClick={() => setSelectedProject(null)}
+                    aria-label="ปิดรายละเอียดผลงาน"
                     className="absolute top-4 right-4 bg-white hover:bg-slate-100 text-slate-700 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg shadow transition"
                   >
                     ✕
@@ -652,6 +702,38 @@ export default function PortfolioPage() {
                 </div>
               )}
 
+              {(selectedProject.challenge || selectedProject.solution || selectedProject.result) && (
+                <div className="mb-6 grid sm:grid-cols-1 gap-3">
+                  {selectedProject.challenge && (
+                    <div className="bg-rose-50 border border-rose-100 rounded-2xl p-5">
+                      <p className="text-rose-500 font-semibold mb-2 flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-rose-400" />
+                        {t.challengeLabel}
+                      </p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{selectedProject.challenge}</p>
+                    </div>
+                  )}
+                  {selectedProject.solution && (
+                    <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+                      <p className="text-amber-600 font-semibold mb-2 flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-amber-400" />
+                        {t.solutionLabel}
+                      </p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{selectedProject.solution}</p>
+                    </div>
+                  )}
+                  {selectedProject.result && (
+                    <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+                      <p className="text-emerald-600 font-semibold mb-2 flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                        {t.resultLabel}
+                      </p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{selectedProject.result}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {selectedProject.images && selectedProject.images.length > 1 && (
                 <div className="mb-6">
                   <p className="text-slate-700 font-semibold mb-3">{t.moreImages}</p>
@@ -660,7 +742,7 @@ export default function PortfolioPage() {
                       <img
                         key={i}
                         src={img}
-                        alt={`${selectedProject.title} ${i + 2}`}
+                        alt={`${selectedProject.title} - ภาพประกอบเพิ่มเติม`}
                         className="w-full h-40 object-cover rounded-2xl border border-slate-200"
                       />
                     ))}
